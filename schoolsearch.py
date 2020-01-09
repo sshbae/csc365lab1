@@ -14,6 +14,13 @@ def gradeSearch(cmd, df):
     for index, row in stuDf.iterrows():
         print(f'{row["StLastName"]} {row["StFirstName"]}')
 
+def busSearch(cmd, df):
+    if len(cmd) < 2:
+        return
+    stuDf = df.where(int(cmd[1]) == df["Bus"]).dropna()
+    for index, row in stuDf.iterrows():
+        print(f'{row["StLastName"]} {row["StFirstName"]} Grade {int(row["Grade"])} Classroom {int(row["Classroom"])}')
+
 def avgSearch(cmd, df):
     if len(cmd) < 2:
         return
