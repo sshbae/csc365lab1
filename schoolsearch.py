@@ -1,5 +1,15 @@
 import pandas as pd
 
+def studentSearch(cmd, df):
+    if len(cmd) < 2:
+        return
+    stuDf = df.where(cmd[1] == df["StLastName"]).dropna()
+    for index, row in stuDf.iterrows():
+        if len(cmd) == 2:
+           print(f'{row["StLastName"]} {row["StFirstName"]} {int(row["Grade"])} {int(row["Classroom"])} {row["TLastName"]} {row["TFirstName"]}')
+        elif len(cmd) == 3:
+           print(f'{row["StLastName"]} {row["StFirstName"]} {int(row["Bus"])}')
+
 def teacherSearch(cmd, df):
     if len(cmd) < 2:
         return
@@ -7,17 +17,29 @@ def teacherSearch(cmd, df):
     for index, row in stuDf.iterrows():
         print(f'{row["StLastName"]} {row["StFirstName"]}')
     
-def gradeSearchNoOpt(grade, df):
+def getHighLow(highLow, df):
+    if highLow[0] == 'H':
+        df = df.nlargest(1,  ["GPA"])
+    elif highLow[0] == 'L':
+        df = df.nsmallest(1, ["GPA"])
+    for index, row in df.iterrows():
+         print(f'{row["StLastName"]} {row["StFirstName"]} {row["GPA"]} {row["TLastName"]} {row["TFirstName"]}{int(row["Bus"])}')
+
+def gradeSearchNoOpt(cmd, cmdLen, df):
+    grade = int(cmd[1])
     stuDf = df.where(grade == df["Grade"]).dropna()
+    if len(cmd) == 3:
+        getHighLow(cmd[2], stuDf)
     for index, row in stuDf.iterrows():
-        print(f'{row["StLastName"]} {row["StFirstName"]}')
+        if cmdLen == 2:
+            print(f'{row["StLastName"]} {row["StFirstName"]}')
 
 def gradeSearch(cmd, df):
     cmdLen = len(cmd)
     if cmdLen < 2:
         return
-    if cmdLen == 2:
-        gradeSearchNoOpt(int(cmd[1]), df)
+    gradeSearchNoOpt(cmd, cmdLen, df)
+    
 
 def busSearch(cmd, df):
     if len(cmd) < 2:
@@ -30,6 +52,8 @@ def avgSearch(cmd, df):
     if len(cmd) < 2:
         return
     stuDf = df.where(int(cmd[1]) == df["Grade"]).dropna()
+    if stuDf.empty():
+       return
     avg = stuDf["GPA"].mean()
     print(f'Grade level {cmd[1]}\nAverage GPA {avg}')
 
@@ -59,7 +83,7 @@ def handleAsk(cmd, df):
     
 
 def main():
-    df = pd.read_csv("./students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
+    df = pd.read_csv(r"C:\Users\Nicole Schwartz\Documents\cpe365\csc365lab1\students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
 
     print(f"""• S[tudent]: <lastname> [B[us]]
     \n• T[eacher]: <lastname>
