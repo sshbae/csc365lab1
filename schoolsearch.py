@@ -14,6 +14,12 @@ def avgSearch(cmd, df):
     avg = stuDf["GPA"].mean()
     print(f'Grade level {cmd[1]}\nAverage GPA {avg}')
 
+def infoSearch(cmd, df):
+    for i in range(7):
+        stuDf = df.where(i == df["Grade"]).dropna()
+        print(f'Grade {i}: {stuDf.shape[0]} students')
+
+
 def handleAsk(cmd, df):
     if cmd[0][0] == 'S' :
         studentSearch(cmd, df)
@@ -30,7 +36,7 @@ def handleAsk(cmd, df):
         avgSearch(cmd, df)
 
     if cmd[0][0] == 'I' :
-        inforSearch(cmd, df)
+        infoSearch(cmd, df)
     
 
 def main():
