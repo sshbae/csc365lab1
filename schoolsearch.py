@@ -23,22 +23,22 @@ def getHighLow(highLow, df):
     elif highLow[0] == 'L':
         df = df.nsmallest(1, ["GPA"])
     for index, row in df.iterrows():
-         print(f'{row["StLastName"]} {row["StFirstName"]} {row["GPA"]} {row["TLastName"]} {row["TFirstName"]}{int(row["Bus"])}')
+         print(f'{row["StLastName"]} {row["StFirstName"]} GPA {row["GPA"]} Teacher {row["TLastName"]} {row["TFirstName"]} Bus {int(row["Bus"])}')
 
-def gradeSearchNoOpt(cmd, cmdLen, df):
-    grade = int(cmd[1])
-    stuDf = df.where(grade == df["Grade"]).dropna()
-    if len(cmd) == 3:
-        getHighLow(cmd[2], stuDf)
+def gradeSearchNoOpt(grade, stuDf):
     for index, row in stuDf.iterrows():
-        if cmdLen == 2:
-            print(f'{row["StLastName"]} {row["StFirstName"]}')
+        print(f'{row["StLastName"]} {row["StFirstName"]}')
 
 def gradeSearch(cmd, df):
     cmdLen = len(cmd)
     if cmdLen < 2:
         return
-    gradeSearchNoOpt(cmd, cmdLen, df)
+    grade = int(cmd[1])
+    stuDf = df.where(grade == df["Grade"]).dropna()
+    if cmdLen == 2:
+        gradeSearchNoOpt(grade, stuDf)
+    elif cmdLen == 3:
+        getHighLow(cmd[2], stuDf)
     
 
 def busSearch(cmd, df):
@@ -83,7 +83,7 @@ def handleAsk(cmd, df):
     
 
 def main():
-    df = pd.read_csv(r"C:\Users\Nicole Schwartz\Documents\cpe365\csc365lab1\students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
+    df = pd.read_csv(r"./students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
 
     print(f"""• S[tudent]: <lastname> [B[us]]
     \n• T[eacher]: <lastname>
