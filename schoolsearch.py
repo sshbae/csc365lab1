@@ -6,8 +6,14 @@ def teacherSearch(cmd, df):
     stuDf = df.where(cmd[1] == df["TLastName"]).dropna()
     for index, row in stuDf.iterrows():
         print(f'{row["StLastName"]} {row["StFirstName"]}')
-    #print(stuDf)
     
+def avgSearch(cmd, df):
+    if len(cmd) < 2:
+        return
+    stuDf = df.where(int(cmd[1]) == df["Grade"]).dropna()
+    avg = stuDf["GPA"].mean()
+    print(f'Grade level {cmd[1]}\nAverage GPA {avg}')
+
 def handleAsk(cmd, df):
     if cmd[0][0] == 'S' :
         studentSearch(cmd, df)
@@ -49,7 +55,7 @@ def main():
         \n• A[verage]: <number>
         \n• I[nfo]
         \n• Q[uit]""")
-        cmd = input()
+        cmd = input(">>")
     return 
 
 if __name__ == '__main__':
