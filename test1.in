@@ -16,8 +16,8 @@ Student: LEEEE
 //Expected Output: NOAH GUM 54
 Student: GUM BUS
 
-//TC-5
-//Requirement: R5
+//TC-4
+//Requirement: R6
 //Expected Output: 
     //LIBRANDI TODD
     //HAVIR BOBBIE
@@ -32,11 +32,96 @@ Student: GUM BUS
     //TOWLEY LANE
 T: HAMER
 
-
-//TC-5
-//Requirement: R5
+//TC-
+//Requirement: R6
 //Expected Output:
-T: JAN
+    //SCHOENECKER PHUONG
+    //CLECKLER FLOY
+    //KRAKE VALENTIN
+    //CREMEANS RANDOLPH
+    //KREESE CARRIE
+Teacher: GAMBREL
+
+//TC-
+//Requirement: R6
+//Expected Output:
+    //COOKUS XUAN
+    //ELHADDAD SHANTE
+    //SWEDLUND SHARRI
+    //CIGANEK MANIE
+    //COVINGTON TOMAS
+    //EARLY TORY
+    //LINHART LELA
+T: FAFARD
+
+//TC-
+//Requirement: R6
+//Expected Output:
+    //RACANELLO NOEL
+    //CORONADO DIMPLE
+    //BOYTER WAN
+    //KEMERER ROSETTA
+    //DEMARTINI DEWAYNE
+T: KERBS
+
+//TC-
+//Requirement: R6
+//Expected Output:
+    //WOOLERY NOLAN
+    //VILARDO EMMANUEL
+T: STEIB
+
+//TC-
+//Requirement: R6
+//Expected Output:
+    //STERBACK PETER
+    //FINCHMAN MATHILDA
+    //OBREIN STAN
+    //SAENPHIMMACHA NUMBERS
+    //BREVO JANNETTE
+    //BEAN INGER
+    //FEYEREISEN WILFREDO
+    //WERST LEON
+    //LAMKIN TAMA
+T: NISTENDIRK
+
+//TC-
+//Requirement: R6
+//Expected Output:
+    //BRODERSEN HYE
+    //THEUNISSEN GRACE
+T: ALPERT
+
+//TC-
+//Requirement: R6
+//Expected Output:
+    //CORKER CARTER
+    //IMMERMAN DEVIN
+    //RAPOSE ALONZO
+    //OGAS ERVIN
+    //MASSART ELDON
+    //BEX TAMESHA
+T: HANTZ
+
+//TC-
+//Requirement: R6
+//Expected Output:
+    //ZAPPAVIGNA ELLIOTT
+    //FRIEDSTROM REED
+T: BODZIONY
+
+//TC-
+//Requirement: R6
+//Expected Output:
+    //WORBINGTON DEEDRA
+    //SPANICEK KENDRA
+    //GUICE CODI
+    //GLOR HUNG
+    //GUM NOAH
+    //NOVICK ROLLAND
+    //DELUNA KRYSTAL
+    //COMO ZANDRA
+T: CHIONCHIO
 
 //
 //Requirement: R7
