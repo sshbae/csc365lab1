@@ -83,11 +83,8 @@ def handleAsk(cmd, df):
     
 
 def main():
-<<<<<<< HEAD
-    df = pd.read_csv("students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
-=======
-    df = pd.read_csv(r"./students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
->>>>>>> 233a84b40b3aeae7562fcace8e19f9cb35fead85
+    df = pd.read_csv(r'\Users\Nicole Schwartz\Anaconda3\csc365\csc365lab1\students.txt', header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
+    #df = pd.read_csv(r"./students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
 
     print(f"""• S[tudent]: <lastname> [B[us]]
     \n• T[eacher]: <lastname>

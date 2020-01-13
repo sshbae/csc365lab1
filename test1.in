@@ -1,2 +1,40 @@
+//CSC 365 Winter 2020
+//Lab 1-1 Test Suite
+
+//TC-1
+//Requirement: R4
+//Expected Output: CORONADO DIMPLE 6 102 KERBS BENITO
 S: CORONADO
+
+//TC-2
+//Requirement: R4
+//Expected Output: 
+Student: LEEEE
+
+//TC-3
+//Requirement: R5
+//Expected Output: NOAH GUM 54
+Student: GUM BUS
+
+//TC-5
+//Requirement: R5
+//Expected Output: 
+    //LIBRANDI TODD
+    //HAVIR BOBBIE
+    //SARAO DIEDRA
+    //VANCOTT MIKE
+    //WICINSKY TERESE
+    //KOZOLA BUSTER
+    //MULLINGS LEIGHANN
+    //BUSSMANN BILLY
+    //BERBES DICK
+    //MULGREW RANDELL
+    //TOWLEY LANE
+T: HAMER
+
+
+//TC-5
+//Requirement: R5
+//Expected Output:
+T: JAN
 Q
