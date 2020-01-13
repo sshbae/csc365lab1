@@ -84,8 +84,10 @@ def handleAsk(cmd, df):
 
 def main():
     #df = pd.read_csv(r'\Users\Nicole Schwartz\Anaconda3\csc365\csc365lab1\students.txt', header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
-    df = pd.read_csv(r"./students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
-
+    try:
+       df = pd.read_csv(r"./students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
+    except FileNotFoundError:
+        return
     print(f"""• S[tudent]: <lastname> [B[us]]
     \n• T[eacher]: <lastname>
     \n• B[us]: <number>
