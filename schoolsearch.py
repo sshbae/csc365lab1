@@ -52,7 +52,7 @@ def avgSearch(cmd, df):
     if len(cmd) < 2:
         return
     stuDf = df.where(int(cmd[1]) == df["Grade"]).dropna()
-    if stuDf.empty():
+    if stuDf.empty:
        return
     avg = stuDf["GPA"].mean()
     print(f'Grade level {cmd[1]}\nAverage GPA {avg}')
@@ -83,8 +83,8 @@ def handleAsk(cmd, df):
     
 
 def main():
-    df = pd.read_csv(r'\Users\Nicole Schwartz\Anaconda3\csc365\csc365lab1\students.txt', header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
-    #df = pd.read_csv(r"./students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
+    #df = pd.read_csv(r'\Users\Nicole Schwartz\Anaconda3\csc365\csc365lab1\students.txt', header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
+    df = pd.read_csv(r"./students.txt", header=None, names=["StLastName", "StFirstName", "Grade", "Classroom", "Bus", "GPA", "TLastName", "TFirstName"])
 
     print(f"""• S[tudent]: <lastname> [B[us]]
     \n• T[eacher]: <lastname>

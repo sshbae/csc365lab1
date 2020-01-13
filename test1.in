@@ -38,3 +38,60 @@ T: HAMER
 //Expected Output:
 T: JAN
 Q
+
+
+//
+//Requirement:R10
+//Expected Output:
+A: 0
+
+//
+//Requirement:R10
+//Expected Output:
+    //Grade level 1
+    //Average GPA 2.995
+A: 1
+
+//
+//Requirement:R10
+//Expected Output:
+    //Grade level 2
+    //Average GPA 2.946153846153846
+A: 2
+
+//
+//Requirement:R10
+//Expected Output:
+    //Grade level 3
+    //Average GPA 3.048888888888889
+A: 3
+
+//
+//Requirement:R10
+//Expected Output:
+    //Grade level 4
+    //Average GPA 2.951333333333334
+Average: 4
+
+//
+//Requirement:R10
+//Expected Output:
+A: 5
+
+//
+//Requirement:R10
+//Expected Output:
+    //Grade level 6
+    //Average GPA 2.977142857142857
+Average: 6
+
+//Requirement: R11
+//Expected Output:
+    //Grade 0: 0 students
+    //Grade 1: 2 students
+    //Grade 2: 13 students
+    //Grade 3: 9 students
+    //Grade 4: 15 students
+    //Grade 5: 0 students
+    //Grade 6: 21 students
+I
