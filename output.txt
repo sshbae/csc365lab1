@@ -1,47 +1,28 @@
-â€¢ S[tudent]: <lastname> [B[us]]
+• S[tudent]: <lastname> [B[us]]
     
-â€¢ T[eacher]: <lastname>
+• T[eacher]: <lastname>
     
-â€¢ B[us]: <number>
+• B[us]: <number>
     
-â€¢ G[rade]: <number> [H[igh]|L[ow]]
+• G[rade]: <number> [H[igh]|L[ow]]
     
-â€¢ A[verage]: <number>
+• A[verage]: <number>
     
-â€¢ I[nfo]
+• I[nfo]
     
-â€¢ Q[uit]
->>â€¢ S[tudent]: <lastname> [B[us]]
+• Q[uit]
+>>CORONADO DIMPLE 6 102 KERBS BENITO
+• S[tudent]: <lastname> [B[us]]
         
-â€¢ T[eacher]: <lastname>
+• T[eacher]: <lastname>
         
-â€¢ B[us]: <number>
+• B[us]: <number>
         
-â€¢ G[rade]: <number> [H[igh]|L[ow]]
+• G[rade]: <number> [H[igh]|L[ow]]
         
-â€¢ A[verage]: <number>
+• A[verage]: <number>
         
-â€¢ I[nfo]
+• I[nfo]
         
-â€¢ Q[uit]
->>â€¢ S[tudent]: <lastname> [B[us]]
-        
-â€¢ T[eacher]: <lastname>
-        
-â€¢ B[us]: <number>
-        
-â€¢ G[rade]: <number> [H[igh]|L[ow]]
-        
-â€¢ A[verage]: <number>
-        
-â€¢ I[nfo]
-        
-â€¢ Q[uit]
->>Traceback (most recent call last):
-  File "./schoolsearch.py", line 112, in <module>
-    main()
-  File "./schoolsearch.py", line 100, in main
-    handleAsk(cmd, df)
-  File "./schoolsearch.py", line 67, in handleAsk
-    if cmd[0][0] == 'S' :
-IndexError: list index out of range
+• Q[uit]
+>>
